@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutation Analysis Results</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static',
+          filename='css/style.css') }}">
+</head>
+<body>
+<main>
+    <div class="results-container">
+        
+        <div class="results-title">
+            <h1>🧬 Mutation Analysis Results</h1>
+            <p>Comprehensive genomic analysis and AI-powered insights</p>
+        </div>
+
+        <section class="section">
+            <div class="stats-card">
+                <h2>Total Mutations</h2>
+                <div class="stats-number">{{ results.total_mutations }}</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3>🔬 Top Mutated Genes</h3>
+            <ul>
+            {% for gene, count in results.top_genes.items() %}
+                <li><strong>{{ gene }}</strong> — <span class="count-badge">{{ count }}</span> mutations</li>
+            {% endfor %}
+            </ul>
+        </section>
+
+        <section class="section">
+            <h3>📊 Mutation Visualizations</h3>
+            <div class="plot-container">
+            {% for plot in plots %}
+                <img src="/{{ plot }}" alt="Mutation visualization chart">
+            {% endfor %}
+            </div>
+        </section>
+
+        <section class="ai-analysis">
+            <h2>🤖 AI-Powered Interpretation</h2>
+            <div class="ai-content">
+                {{ ai_summary | safe }}
+            </div>
+        </section>
+
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAF AI Analyzer - Genomic Mutation Analysis</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<main>
+    <div class="home-container">
+
+        <h1>🧬 AI-Powered Mutation Analysis</h1>
+
+        <p class="subtitle">
+            Upload MAF cancer mutation files and generate
+            AI-driven genomic insights, mutation statistics,
+            and visualization reports.
+        </p>
+
+        <div class="upload-box">
+
+            <form action="/upload"
+                  method="POST"
+                  enctype="multipart/form-data">
+
+                <input type="file"
+                       name="maf_file"
+                       accept=".maf,.txt"
+                       required>
+
+                <button type="submit">
+                    Analyze Mutations
+                </button>
+
+            </form>
+
+        </div>
+
+        <section class="features">
+
+            <div class="feature-card">
+                <h3>📊 Mutation Analysis</h3>
+                <p>
+                    Detect top mutated genes and variant patterns.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🤖 AI Interpretation</h3>
+                <p>
+                    Gemini AI explains biological significance.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📈 Visualization</h3>
+                <p>
+                    Generate professional mutation charts instantly.
+                </p>
+            </div>
+
+        </section>
+
+    </div>
+</main>
+</body>
+</html>
