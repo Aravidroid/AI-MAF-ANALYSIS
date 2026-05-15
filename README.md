@@ -1,4 +1,4 @@
-# 🧬 MAF-AI-PLATFORM
+# 🧬 AI-MAF-ANALYSIS
 
 AI-powered cancer mutation analysis platform built with Flask, Bioinformatics pipelines, Visualization tools, and Gemini AI interpretation.
 
@@ -18,7 +18,7 @@ AI-powered cancer mutation analysis platform built with Flask, Bioinformatics pi
 # 🏗️ Project Architecture
 
 ```text
-MAF-AI-PLATFORM/
+AI-MAF-ANALYSIS/
 │
 ├── analysis/
 │   ├── mutation_analysis.py
@@ -80,9 +80,9 @@ Results Rendered on Dashboard
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/MAF-AI-PLATFORM.git
+git clone https://github.com/your-username/AI-MAF-ANALYSIS.git
 
-cd MAF-AI-PLATFORM
+cd AI-MAF-ANALYSIS
 ```
 
 ---
